@@ -25,6 +25,7 @@ jobs:
               run: npm run build
 
     deploy:
+        needs: test-build
         runs-on: ubuntu-latest
         steps:
             - name: Deploy App
