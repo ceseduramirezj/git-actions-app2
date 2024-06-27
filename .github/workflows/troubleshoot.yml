@@ -1,0 +1,8 @@
+name: TroubleShoot Workflow
+on: issues
+jobs:
+    troubleshoot:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show Details
+              run: echo "${{ toJson(github.event.issue) }}"
